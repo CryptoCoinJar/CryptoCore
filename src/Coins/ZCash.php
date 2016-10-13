@@ -117,21 +117,8 @@ class ZCash {
             $this->error = $this->response['error']['message'];
         }
         elseif ($this->status != 200) {
-            // If bitcoind didn't return a nice error message, we need to make our own
-            switch ($this->status) {
-                case 400:
-                    $this->error = 'HTTP_BAD_REQUEST';
-                    break;
-                case 401:
-                    $this->error = 'HTTP_UNAUTHORIZED';
-                    break;
-                case 403:
-                    $this->error = 'HTTP_FORBIDDEN';
-                    break;
-                case 404:
-                    $this->error = 'HTTP_NOT_FOUND';
-                    break;
-            }
+           // If bitcoind didn't return a nice error message, return the reason phrase
+            return $this->raw_response->getReasonPhrase();
         }
 
         if ($this->error) {
