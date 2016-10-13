@@ -1,0 +1,26 @@
+{
+    "name": "cryptocoinjar/cryptocore",
+    "description": "Implementation of raw transactions in bitcoin, zcash, HD wallets, Electrum wallets, and other crypto wallets.",
+    "keywords": ["bitcoin", "php", "bip32", "electrum", "ecc", "transactions", "HD wallet","btc", "cryptocurrency", "zcash"],
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "CryptoCoinJar\\CryptoCore\\": "src/"
+        }
+    },
+    "require": {
+        "mdanter/ecc": "~0.3.0",
+        "php": ">=5.3.3",
+        "rych/hash_pbkdf2-compat": "~1.0",
+        "ext-gmp": "*",
+        "ext-bcmath": "*",
+        "ext-mcrypt": "*"
+    },
+    "suggest": {
+        "ext-intl": "Required for BIP39 Mnemonic Seeds with UTF-8 passphrases"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~4.1",
+        "squizlabs/php_codesniffer": "~2"
+    }
+}
