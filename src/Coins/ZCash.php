@@ -4,8 +4,7 @@ namespace CryptoCoinJar\CryptoCore\Coins;
 use GuzzleHttp\Client;
 
 class ZCash {
-
-
+    
     //ports - mainnet: 8232 or testnet: 18232
     // Configuration options
     private $username;
@@ -25,8 +24,7 @@ class ZCash {
     public $response;
 
     private $id = 0;
-
-
+    
     /**
      * @param string $username
      * @param string $password
